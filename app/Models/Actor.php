@@ -16,6 +16,6 @@ class Actor extends Model
     use HasFactory;
     //Relacion M:M con film
     public function film(){
-        return $this->belongsToMany(Film::class,'film_category','actor_id','film_id');
+        return $this->belongsToMany(Film::class,'film_actor','actor_id','film_id');
     }
 }
